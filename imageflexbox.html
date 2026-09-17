@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Flexbox</title>
+    <style>
+        .flexparent {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            gap: 50px;
+            height: 100vh;
+        }
+        .imgsmall {
+            width: 100px;
+            height: 100px;
+        }
+        .imgbig {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flexparent">
+        <img class="imgsmall" src="https://picsum.photos/200/200?random=1" alt="Image 1">
+        <img class="imgbig" src="https://picsum.photos/300/350?random=2" alt="Image 2">
+        <img class="imgsmall" src="https://picsum.photos/200/200?random=3" alt="Image 3">
+    </div>
+</body>
+</html>

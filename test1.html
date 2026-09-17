@@ -1,51 +1,41 @@
-<!DOCTYPE html>>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex box</title>
+    <style>
+        #flex_parent {
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items:flex-start
+            display: flex;
 
+        }
+        div div {
+            width:100px;
+            background-color: orange;
+            border: 1px solid;
+            box-sizing: border-box;
+            margin: 10px;
+        }
+        #child1 {
+            min-height: 50px;
+            
+        }
+        #child2 {
+            min-height: 150px;
+            
+        }
+        #child3 {
+            min-height: 200px;
+            
+        }
+    </style>
+    
+    <div id ="flex_parent">
+        <div id ="child1">Child 1</div>
+        <div id ="child2">Child 2</div>
+        <div id ="child3">Child 3</div>
 </head>
-<body>
-    <header>
-        <h1>HTML</h1>
-
-    </header>
-    <main>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Grade</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td> Mike</td>
-                    <td> 90 </td>
-                </tr>
-                <tr>
-                    <td> Matthew</td>
-                    <td> 85 </td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
-
-    <h2>My colors</h2>
-    <ol>
-        <li>Red</li>
-        <ul>
-            <li> Orange
-
-            </li>
-        </ul>
-        <li>Green</li>
-        <li>Blue</li>
-    </ol>
-
-    <ul>
-        <li>Red</li>
-        <li>Green</li>
-        <li>Blue</li>
-    </ul>
-</body>
 </html>
-<!-- order list is ol, unordered list is ul, li meanings listing items-->
