@@ -1,0 +1,48 @@
+<!DOCTYPE html>>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 Homework 2</title>
+    <style>
+        .flexparent{
+            display: flex;
+            align-items: stretch;
+        }
+        .side{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 600px;
+        }
+        .child1{
+            align-self: flex-end;
+        }
+        .child3{
+            align-self:flex-start
+        }
+        .child4{
+            align-self: flex-start;
+        }
+        .child6{
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <main class="flexparent">
+        <div class="side">
+            <img class="child1" src="https://picsum.photos/100/100?/random=1" alt="picture">
+            <img class="child2" src="https://picsum.photos/100/100?/random=2" alt="picture">
+            <img class="child3" src="https://picsum.photos/100/100?/random=3" alt="picture">
+        </div>
+        <div class="side">
+            <img class="child4" src="https://picsum.photos/100/100?/random=4" alt="picture">
+            <img class="child5" src="https://picsum.photos/100/100?/random=5" alt="picture">
+            <img class="child6" src="https://picsum.photos/100/100?/random=6" alt="picture">
+        </div>
+    </main>
+
+</body>
+</html>
