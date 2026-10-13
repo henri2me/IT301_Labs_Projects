@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans HW5 Matthew Henriques</title>
+
+    <script src="https://kit.fontawesome.com/0c5bdac1be.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-color: #301432;
+            font-family: Arial;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .box {
+            background-color: #d2a4d7;
+            width: 215px;
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            border-bottom: 1px solid black;
+            padding: 4px;
+            font-size: 12px;
+        }
+        
+        li:last-child{
+            border-bottom: none;
+        }
+
+        button {
+            margin-top: auto;
+            padding: 7px;
+            background-color: #ca79d0;
+            border: 1px solid purple;
+            border-radius: 3px;
+            font-weight: bold;
+            align-self: center;
+        }
+
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: yellow;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .phone {
+            position: fixed;
+            bottom: 35px;
+            right: -45px;
+            background-color: orange;
+            padding: 12px 35px;
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="box">
+            <div class="badge" style="background-color: lime;">
+                <i class="fas fa-hand-holding-usd"></i>
+            </div>
+
+            <h2>Economy</h2>
+
+            <ul>
+                <li>Amet quisquam unde?</li>
+                <li>Dolor quam facilis.</li>
+                <li>Elit voluptas qui.</li>
+                <li>Amet veniam sapiente.</li>
+                <li>Adipisicing nobis at?</li>
+            </ul>
+
+            <button>Save Money</button>
+        </div>
+
+        <div class="box">
+            <div class="badge">
+                <i class="fas fa-medal"></i>
+            </div>
+
+            <h2>Preferred</h2>
+
+            <ul>
+                <li>Elit vel sit!</li>
+                <li>Lorem maiores iusto?</li>
+                <li>Adipisicing reiciendis impedit.</li>
+                <li>Ipsum quas ea!</li>
+                <li>Elit maiores similique</li>
+                <li>Ipsum iusto excepturi?</li>
+                <li>Lorem rem porro?</li>
+            </ul>
+
+            <button>Rival the Competition</button>
+        </div>
+
+        <div class="box">
+            <div class="badge" style="background-color: orange;">
+                <i class="fas fa-hat-wizard"></i>
+            </div>
+
+            <h2>Premium</h2>
+
+            <ul>
+                <li>Elit facilis corrupti</li>
+                <li>Amet asperiores consequuntur</li>
+                <li>Dolor praesentium unde</li>
+                <li>Lorem dicta blanditiis!</li>
+                <li>Consectetur amet praesentium</li>
+                <li>Dolor veniam recusandae?</li>
+                <li>Consectetur sequi quidem.</li>
+                <li>Dolor perferendis architecto</li>
+                <li>Sit error vel.</li>
+                <li>Sit vel exercitationem</li>
+                <li>Elit animi eveniet.</li>
+                <li>Consectetur velit sequi.</li>
+            </ul>
+
+            <button>Become a Power User</button>
+        </div>
+
+    </div>
+
+    <div class="phone">
+        CALL 1-800-555-5555
+    </div>
+
+</body>
+</html>

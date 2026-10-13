@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <script>
+        let number;
+        let message = "Enter the total restaurant bill greater than zero, without a dollar sign.";
+
+        do {
+            number = Number(prompt(message));
+
+            if (number == 0) {
+                message = "Please enter a bill amount greater than zero.";
+            }
+            else if (number < 0) {
+                message = "Negative amounts are not allowed. Please enter a valid bill amount.";
+            }
+            else if (isNaN(number)) {
+                message = "Invalid input. Please enter a numeric bill amount.";
+            }
+
+        } while (isNaN(number) || number <= 0);
+
+        let tip = number * 0.10;
+
+        let final = `For a bill of $${number}, the tip should be $${tip}.`;
+
+        console.log(final);
+        document.write(final);
+    </script>
+</body>
+</html>
