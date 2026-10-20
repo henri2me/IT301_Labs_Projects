@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greet and Calculate</title>
+</head>
+<body>
+    <form action="#">
+        <label for="name">What is your name?</label><br><br>
+        <input type="text" id="name"><br><br>
+        <button id="bttn" type="button">Submit</button><br><br>
+
+        <label for="num1">What is the first number?</label><br><br>
+        <input type="number" id="num1"><br><br>
+        <button id="bttn2" type="button">Submit</button><br><br>
+
+        <label for="num2">What is the second number?</label><br><br>
+        <input type="number" id="num2"><br><br>
+        <button id="bttn3" type="button">Submit</button><br><br>
+    </form>
+     <p>Select an operation:</p>
+    <form action="#">
+        <input type="radio" name = "op" value="add">Add<br><br>
+        <input type="radio" name = "op" value="subtract">Subtract<br><br>
+        <input type="radio" name = "op" value="multiply">Multiply<br><br>
+        <input type="radio" name = "op" value="divide">Divide<br><br>
+
+        <button id="select" type="button">Select</button>
+    </form>
+    <p id='answer'></p></br></br>
+
+    <button id="clear" type="button">Clear</button>
+
+    <script>
+        const name = document.getElementById('name');
+        const numberone = document.getElementById('num1');
+        const numbertwo = document.getElementById('num2');
+
+        var numone = 0;
+        var numtwo = 0;
+
+        var numthree = 0;
+
+        document.getElementById('bttn').addEventListener('click', function(){
+            console.log(`Hello ${name.value}!`);
+        });
+
+        document.getElementById('bttn2').addEventListener('click', function(){
+            numone = Number(numberone.value);
+            console.log(numone);
+        });
+
+        document.getElementById('bttn3').addEventListener('click', function(){
+            numtwo = Number(numbertwo.value);
+            console.log(numtwo);
+        });
+
+        document.getElementById('select').addEventListener('click', function(){
+            const operator = document.querySelector('[name = op]:checked');
+            if (operator.value == "add") {
+                numthree = numone + numtwo;
+                console.log(`Your answer is ${numthree}`);
+                document.getElementById('answer').textContent = `Your answer is ${numthree}`;
+            }
+            else if (operator.value == "subtract") {
+                numthree = numone - numtwo;
+                console.log(`Your answer is ${numthree}`);
+                document.getElementById('answer').textContent = `Your answer is ${numthree}`;
+            }
+            else if (operator.value == "multiply") {
+                numthree = numone * numtwo;
+                console.log(`Your answer is ${numthree}`);
+                document.getElementById('answer').textContent = `Your answer is ${numthree}`;
+            }
+            else if (operator.value == "divide") {
+                numthree = numone / numtwo;
+                console.log(`Your answer is ${numthree}`);
+                document.getElementById('answer').textContent = `Your answer is ${numthree}`;
+            }
+        });
+        document.getElementById('clear').addEventListener('click', function(){
+            name.value = "";
+            numberone.value = "";
+            numbertwo.value = "";
+
+            document.querySelectorAll('[name="op"]').forEach(function(radio){
+                radio.checked = false;
+            });
+
+            document.getElementById('answer').textContent = "";
+            numone = 0;
+            numtwo = 0;
+            numthree = 0;
+        });
+
+    </script>
+
+</body>
+
+
+</html>
