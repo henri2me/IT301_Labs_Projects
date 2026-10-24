@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #243247;
+    background-color: #f4f6f8;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    line-height: 1.2;
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    background-color: #17324d;
+}
+
+.index-header {
+    background-image: url("../images/header.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 16px;
+    background-color: white;
+}
+
+a {
+    color: #174f7a;
+}
+
+nav a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+section {
+    margin-bottom: 36px;
+}
+
+.dest-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.dest-card {
+    flex-basis: 40%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid #d5dde5;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.dest-card h3 {
+    margin-top: 0;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #17324d;
+}
+
+.tokyo-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.city-photo, .tokyo-description {
+    flex: 1;
+    min-width: 0;
+}
+
+.city-photo {
+    position: relative;
+    margin: 0;
+}
+
+.city-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.photo-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #17324d;
+    color: white;
+    padding: 5px 10px;
+}
+.rome-itinerary {
+    padding-left: 30px;
+    border-left: 4px solid #17324d;
+}
+
+.rome-itinerary li {
+    padding: 0 12px 20px;
+}
+
+.paris-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.paris-table caption {
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.paris-table th, .paris-table td {
+    padding: 12px;
+    border: 1px solid #d5dde5;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.paris-table thead {
+    color: white;
+    background-color: #17324d;
+}
+
+
+.nyc-form {
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #d5dde5;
+}
+
+.nyc-form input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.nyc-form button {
+    padding: 10px 20px;
+    background-color: #17324d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Adjust layout for small screen, dest cards vertically */
+@media (max-width: 600px) {
+    .dest-container, .tokyo-layout {
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 12px;
+    }
+}
+/* Adjust layout for large screen, dest cards horizontally */
+@media (min-width: 601px) {
+    .dest-container {
+        flex-direction: row;
+    }
+}
