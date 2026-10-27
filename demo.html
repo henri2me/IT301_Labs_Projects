@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Cute Cats</h1>
+    <p>Welcome to my cat website</p>   
+    <script>
+        //Create a promise
+        /*
+        const p = new Promise((resolve, reject)=>{
+            const grade = 30;
+            if (grade > 50){resolve('Pass the class....');
+
+            }
+            else {reject('Fail the class');}
+        });
+        */
+        //consume the promise using .then and .catch
+
+        //p.then(success=>console.log(success)).catch(reason=>console.log(reason)).finally(()=>console.log('Done.'));
+        /*
+        const checkGrade = async()=>{
+            try{
+                //handle the fulfilled state
+                const result = await p;
+                console.log(result);
+            }catch{console.log(result);
+                //handle the fail state
+            }
+        }
+            */
+
+        const site = "https://api.thecatapi.com/v1/images/search";
+        let img = document.createElement('img');
+        let bttn = document.createElement('button');
+        bttn.type = 'button';
+        bttn.textContent = 'Click Me';
+
+        let form = document.createElement('form');
+        form.action = '#';
+
+        form.appendChild(bttn);
+        document.body.appendChild(form);
+        const getImg = async()=>{
+            try{
+                let result = await fetch('https://api.thecatapi.com/v1/images/search');
+                result = await result.json();
+                img.src = result[0].url;
+                img.alt = 'cute cat';
+                img.style.width = '300px';
+                document.body.appendChild(img);
+            }catch{(reason)=>console.log(reason)}
+        }
+        bttn.addEventListener('click', getImg);
+        //checkGrade();
+    </script>
+</body>
